@@ -1,0 +1,202 @@
+.App {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.body {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.body::-webkit-scrollbar {
+  display: none;  /* WebKit browsers */
+}
+
+.body header {
+  position: sticky;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.link {
+  padding: 10px 40px 10px 40px;
+  border-radius: 40px;
+  color: white;
+}
+
+.link:hover {
+  background-color: aliceblue;
+  color: black;
+  cursor: pointer;
+}
+
+.link p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.content {
+  height: 210vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .top {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .top .content {
+  flex: 3;
+  display: flex;
+}
+
+.content .top .shade {
+  flex: 2;
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(255,255,255,0) 100%);
+}
+
+.content .top .content .bigs {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  justify-content: flex-end;
+}
+
+.content .top .content .bigs h1 {
+  font-size: 80px;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+.content .top .content .bigs .buttons {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+}
+
+.content .top .content .bigs .buttons button {
+  padding: 20px 40px 20px 40px;
+  margin-left: 10px;
+  font-size: 20px;
+  border-width: 0px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.content .top .content .bigs .buttons .primary {
+  background-color: black;
+  color: aliceblue;
+}
+
+.content .top .content .bigs .buttons .primary:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+.content .top .content .bigs .buttons .secondary {
+  background-color: transparent;
+  color: aliceblue;
+  border: 1px solid aliceblue;
+}
+
+.content .top .content .bigs .buttons .secondary:hover {
+  background-color: aliceblue;
+  color: black;
+  border: 0px;
+}
+
+.content .top .content .margin {
+  flex: 4;
+}
+
+.content .bottom {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  background: rgb(12,45,111);
+  background: radial-gradient(circle, rgba(12,45,111,1) 0%, rgba(0,0,0,1) 60%);
+}
+
+.content .bottom .content {
+  flex: 11;
+  padding: 10vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.content .bottom .content .cards {
+  width: 80%;
+  height: 65%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.content .bottom .content .cards .card {
+  border: 1px solid aliceblue;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.content .bottom footer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+}
+
+.content .bottom footer p {
+  text-align: center;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
